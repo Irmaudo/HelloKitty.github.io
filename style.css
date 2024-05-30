@@ -1,0 +1,105 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(images/Boldins.ttf);
+  }
+  
+h1, button, p {
+    font-family: myFirstFont;
+  }
+
+
+button {
+    background-color: pink;
+    width: 200px;
+    height: 50px;
+    display: float;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+button{
+    font-size: 20px;
+    border-radius: 20px;
+    transition-duration: 0,5s;
+}
+
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+body{
+    background-color: #FEEEED;
+}
+
+h1{
+    display: flexbox;
+    text-align: center;
+    font-size: 70px;
+}
+
+#tekst{
+    display: flex;
+    align-items: center;
+}
+
+button:hover{
+    background-color: rgb(189, 97, 113);
+}
+
+
+#progressContainer1, #progressContainer2, #progressContainer3  {
+    width: 20em;
+    background-color: #ddd;
+    margin-top: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Horizontaal centreren */
+    margin: 0 auto;
+}
+
+#progressWrapper {
+    width: 100%;
+    height: 30px;
+    background-color: #ddd; /* Geef de wrapper een achtergrondkleur om de lege voortgang weer te geven */
+    border-radius: 20px;
+}
+
+
+#progressBar {
+    height: 100%;
+    background-color: #f3758c;
+    border-radius: 20px;
+}
+
+p{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Horizontaal centreren */
+    margin: 10px;
+}
+
+#huidigLevel {
+    font-size: 20px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: right;
+    padding: 10px;
+    margin: 50px;
+    width: 150px;
+
+}
+    
+#level{
+    margin:10px;
+    color: #f3758c;
+    font-size: 25px;
+}
+
