@@ -2,6 +2,8 @@ const image = document.querySelector('#character');
 const sleepingButton = document.querySelector('#sleepButton');
 const playingButton = document.querySelector('#playButton');
 const feedingButton = document.querySelector('#foodButton');
+
+
 const sleepSound = new Audio('music/audio1.mp3'); //Bron hoe ik de code moest doen: https://stackoverflow.com/questions/9419263/how-to-play-audio
 const playSound = new Audio('music/audio2.mp3'); //Bron van audio: https://www.youtube.com/watch?v=z6DFgYn9YkY
 const foodSound = new Audio('music/audio3.mp3'); 
@@ -44,7 +46,7 @@ function changeImageBack(){
 function levelOmhoog(){
     level = level + 1
     updateLevel();
-    //levelMessage();
+    showMessage();
     happy();
 }
 
@@ -57,17 +59,26 @@ function happy(){
     happySound.currentTime = 0; //reset geluid naar het begin
     happySound.play(); 
 }
-// function levelMessage(){
-//     const message = document.querySelector('#hiddenMessage');
-//     message.textcontent = 'Yeay! Je level is omhoog gegaan!';
-//     setTimeout ( () => {
-//         message.display = 'none';
-//     }, 2000);
-// }
+
+function showMessage(){
+    const hiddenMessage= document.getElementById('hiddenMessage');
+    hiddenMessage.textContent = "Yeay! Je bent een level omhoog gegaan!";
+    hiddenMessage.style.display = "block";
+
+    setTimeout(() => {
+        hiddenMessage.style.display = 'none';
+
+    }, 3000);
+
+}
+
+
 
 sleepingButton.addEventListener('click', changeImage);
 playingButton.addEventListener('click', changeImage2);
 feedingButton.addEventListener('click', changeImage3);
+
+
 
 updateLevel();
 
