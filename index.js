@@ -62,7 +62,12 @@ function happy(){
 
 function showMessage(){
     const hiddenMessage= document.getElementById('hiddenMessage');
-    hiddenMessage.textContent = "Yeay! Je bent een level omhoog gegaan!";
+    if (level == 10){
+    hiddenMessage.textContent = "Yippie! Je hebt level 10 behaald!";
+    } else {
+        hiddenMessage.textContent = "Yeay! Je bent een level omhoog gegaan!";
+    }
+
     hiddenMessage.style.display = "block";
 
     setTimeout(() => {
