@@ -2,9 +2,7 @@ const image = document.querySelector('#character');
 const sleepingButton = document.querySelector('#sleepButton');
 const playingButton = document.querySelector('#playButton');
 const feedingButton = document.querySelector('#foodButton');
-
-
-const sleepSound = new Audio('music/audio1.mp3'); //Bron hoe ik de code moest doen: https://stackoverflow.com/questions/9419263/how-to-play-audio
+const sleepSound = new Audio('music/audio1.mp3'); //Bron: https://stackoverflow.com/questions/9419263/how-to-play-audio
 const playSound = new Audio('music/audio2.mp3'); //Bron van audio: https://www.youtube.com/watch?v=z6DFgYn9YkY
 const foodSound = new Audio('music/audio3.mp3'); 
 const happySound = new Audio('music/audio4.mp3'); 
@@ -72,18 +70,12 @@ function showMessage(){
 
     setTimeout(() => {
         hiddenMessage.style.display = 'none';
-
     }, 3000);
-
 }
-
-
 
 sleepingButton.addEventListener('click', changeImage);
 playingButton.addEventListener('click', changeImage2);
 feedingButton.addEventListener('click', changeImage3);
-
-
 
 updateLevel();
 
