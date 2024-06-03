@@ -51,32 +51,6 @@ button:hover{
     background-color: rgb(189, 97, 113);
 }
 
-
-#progressContainer1, #progressContainer2, #progressContainer3  {
-    width: 20em;
-    background-color: #ddd;
-    margin-top: 20px;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Horizontaal centreren */
-    margin: 0 auto;
-}
-
-#progressWrapper {
-    width: 100%;
-    height: 30px;
-    background-color: #ddd; /* Geef de wrapper een achtergrondkleur om de lege voortgang weer te geven */
-    border-radius: 20px;
-}
-
-
-#progressBar {
-    height: 100%;
-    background-color: #f3758c;
-    border-radius: 20px;
-}
-
 p{
     font-size: 20px;
     display: flex;
@@ -101,4 +75,5 @@ p{
     color: #f3758c;
     font-size: 25px;
 }
+
 

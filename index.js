@@ -12,20 +12,20 @@ let level = 0;
 function changeImage(){
     image.src = 'images/sleeping.gif';
     sleepSound.currentTime = 0; //reset geluid naar het begin
-    sleepSound.play(); // bron: https://stackoverflow.com/questions/9419263/how-to-play-audio
+    sleepSound.play(); 
     setTimeout (changeImageBack, 4000);
 }
 
 function changeImage2(){
     image.src = 'images/playing.gif';
-    playSound.currentTime = 0; //reset geluid naar het begin
+    playSound.currentTime = 0; 
     playSound.play(); 
     setTimeout (changeImageBack, 4000);
 }
 
 function changeImage3(){
     image.src = 'images/food.gif';
-    foodSound.currentTime = 0; //reset geluid naar het begin
+    foodSound.currentTime = 0; 
     foodSound.play();
     setTimeout (changeImageBack, 4000);
 }
@@ -41,6 +41,7 @@ function changeImageBack(){
     levelOmhoog();
 }
 
+//level omhoog//
 function levelOmhoog(){
     level = level + 1
     updateLevel();
@@ -48,16 +49,23 @@ function levelOmhoog(){
     happy();
 }
 
+//update level wanneer levelOmhoog//
 function updateLevel() {
     document.getElementById('level').textContent = level;
 }
 
+//image verandert naar happy als levelOmhoog//
 function happy(){
     image.src = 'images/happy1.png';
-    happySound.currentTime = 0; //reset geluid naar het begin
     happySound.play(); 
+    setTimeout(() => {
+        image.src = 'images/character.png';
+        happySound.pause();
+        happySound.currentTime = 0;
+    }, 3000);
 }
 
+//message wanneer levelOmhoog//
 function showMessage(){
     const hiddenMessage= document.getElementById('hiddenMessage');
     if (level == 10){
@@ -66,16 +74,17 @@ function showMessage(){
         hiddenMessage.textContent = "Yeay! Je bent een level omhoog gegaan!";
     }
 
-    hiddenMessage.style.display = "block";
+    hiddenMessage.style.display = "block"; 
 
     setTimeout(() => {
         hiddenMessage.style.display = 'none';
     }, 3000);
 }
 
+//Als op button wordt geklikt, verandert image//
 sleepingButton.addEventListener('click', changeImage);
 playingButton.addEventListener('click', changeImage2);
 feedingButton.addEventListener('click', changeImage3);
 
-updateLevel();
+
 
