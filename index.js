@@ -9,21 +9,21 @@ const happySound = new Audio('music/audio4.mp3');
 
 let level = 0;
 
-function changeImage(){
+function sleepingImage(){
     image.src = 'images/sleeping.gif';
     sleepSound.currentTime = 0; //reset geluid naar het begin
     sleepSound.play(); 
     setTimeout (changeImageBack, 4000);
 }
 
-function changeImage2(){
+function playingImage(){
     image.src = 'images/playing.gif';
     playSound.currentTime = 0; 
     playSound.play(); 
     setTimeout (changeImageBack, 4000);
 }
 
-function changeImage3(){
+function foodImage(){
     image.src = 'images/food.gif';
     foodSound.currentTime = 0; 
     foodSound.play();
@@ -82,9 +82,9 @@ function showMessage(){
 }
 
 //Als op button wordt geklikt, verandert image//
-sleepingButton.addEventListener('click', changeImage);
-playingButton.addEventListener('click', changeImage2);
-feedingButton.addEventListener('click', changeImage3);
+sleepingButton.addEventListener('click', sleepingImage);
+playingButton.addEventListener('click', playingImage);
+feedingButton.addEventListener('click', foodImage);
 
 
 
